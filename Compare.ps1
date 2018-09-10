@@ -1,0 +1,1 @@
+﻿Compare-Object -ReferenceObject $(Get-Content C:\temp\v1.txt) -DifferenceObject $(Get-Content C:\temp\v2.txt)
