@@ -1,0 +1,1 @@
+﻿Get-WinEvent -FilterHashtable @{LogName='System';ID=1500} -MaxEvents 50 -ComputerName Server1
