@@ -1,0 +1,1 @@
+﻿Get-GPResultantSetOfPolicy -ReportType html -User "jtidwell" -Path "c:\temp\report.html" Get-GPResultantSetOfPolicy -user pierceatwood\jtidwell -computer p1162x -ReportType Html -Path c:\temp\rsop.html

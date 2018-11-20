@@ -15,8 +15,8 @@ $EmailCredentials= New-Object System.Management.Automation.PSCredential($usernam
 
 $EmailParameters = @{
     TO = "jtidwell@pierceatwood.com"
-    Subject = '{0} has logged onto {1} at {2}' -f $logon.username, $logon.computername, $logon.time
-    Body = '{0} has logged onto {1} at {2}' -f $logon.username, $logon.computername, $logon.time
+    Subject = "$($env:USERNAME) has logged onto $($env:COMPUTERNAME) at $(get-date)"
+    Body = "$($env:USERNAME) has logged onto $($env:COMPUTERNAME) at $(get-date)"
     BodyAsHtml = $True
     Priority = "High"
     Port = "587"

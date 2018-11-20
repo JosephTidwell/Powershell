@@ -10,6 +10,34 @@ Write-Output $array[3]
 
 
 
+#format>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-param ($COMPUTERNAME ='localhost')
-gwmi win32_logicaldisk -ComputerName $COMPUTERNAME
+Subject = '{0} has logged onto {1} at {2}' -f $logon.username, $logon.computername, $logon.time
+Body = '{0} has logged onto {1} at {2}' -f $logon.username, $logon.computername, $logon.time
+
+
+
+#Stuff>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+$stuff =@()
+
+$process = get-process
+$handle = $process.handle
+$name = $process.processname
+
+
+
+foreach ($h in $handle) {
+
+"The process name is $N"
+
+$stuff += [pscustomobject]@{Handle=
+
+}
+
+$Workstations += [PScustomobject]@{Name=$computer
+
+
+$output = $handle, $name
+
