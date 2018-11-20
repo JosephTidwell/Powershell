@@ -1,0 +1,1 @@
+﻿Get-WMIObject Win32_Printer | where{$_.Network -eq 'true'} | foreach{$_.delete()}
